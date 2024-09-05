@@ -4,71 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedIn Files</title>
-    <!-- Import Fonts from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Import Font Awesome for Icons -->
+    <!-- Import Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Orbitron', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
             margin: 0;
             padding: 0;
+            text-shadow: 1px 1px 2px #000;
         }
         header {
-            background-color: #0077b5; /* LinkedIn color */
-            color: #fff;
-            padding: 20px 0;
+            background: linear-gradient(45deg, #0d0d0d, #333333);
+            color: #00ffcc;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
-            height: 80px; /* Increased height for prominent header */
+            height: 80px;
+            border-bottom: 3px solid #00ffcc;
+            box-shadow: 0 0 10px #00ffcc;
         }
         header h1 {
             margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5em; /* Adjust font size for better heading appearance */
-        }
-        .nav {
-            display: flex;
-            align-items: center;
+            font-size: 1.8em;
         }
         .nav a {
-            color: #fff;
+            color: #00ffcc;
             text-decoration: none;
             margin-left: 15px;
-            font-size: 1em;
+            font-size: 1.1em;
             padding: 5px 10px;
             border-radius: 5px;
-            background-color: #005b7f;
+            background-color: #003f5c;
+            transition: all 0.3s ease;
         }
         .nav a:hover {
-            background-color: #003f5c;
-        }
-        .search-container {
-            position: relative;
-        }
-        .search-container input[type="text"] {
-            display: none;
-            padding: 10px;
-            font-size: 1em;
-            width: 200px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            position: absolute;
-            right: 0;
-            top: 35px;
-        }
-        .search-container input[type="text"].active {
-            display: inline-block;
-        }
-        .search-container .search-icon {
-            font-size: 1.5em;
-            cursor: pointer;
-            color: #fff;
-            margin-left: 15px;
+            background-color: #00ffcc;
+            color: #1a1a1a;
+            text-shadow: none;
         }
         .container {
             margin: 50px auto;
@@ -81,27 +58,45 @@
         .file-item {
             margin: 10px 0;
             padding: 15px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #262626;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .file-item:hover {
+            background-color: #00ffcc;
+            color: #1a1a1a;
+            border-color: #00ffcc;
         }
         .file-item a {
             text-decoration: none;
-            color: #333;
-            font-size: 1.1em;
+            color: #00ffcc;
+            font-size: 1.2em;
             flex: 1;
-            text-align: left;
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-        }
-        .file-item:hover {
-            background-color: #0077b5; /* LinkedIn color on hover */
+            transition: color 0.3s;
         }
         .file-item a:hover {
-            color: #fff; /* White text on hover */
+            color: #1a1a1a;
+        }
+        .file-item a:before {
+            content: "\f11b"; /* Gaming controller icon (FontAwesome) */
+            font-family: 'FontAwesome';
+            padding-right: 10px;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00ffcc;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #008f7a;
         }
     </style>
 </head>
@@ -111,69 +106,15 @@
         <div class="nav">
             <a href="https://hermione-granger-1176.github.io/LinkedIn/">Home</a>
             <a href="#">Excel BI Challenges</a>
-            <div class="search-container">
-                <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
-                <input type="text" id="search" placeholder="Search files...">
-            </div>
         </div>
     </header>
     <div class="container">
         <ul class="file-list" id="fileList">
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Alternatives%20to%20Nested%20IFS%20in%20Power%20Query.xlsx">Alternatives to Nested IFS in Power Query.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Bullet%20Chart%20in%20Excel.xlsx">Bullet Chart in Excel.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Calculating%20Portfolio%20Return%20in%20Excel.xlsx">Calculating Portfolio Return in Excel.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Calculating%20Portfolio%20Return%20in%20Power%20Query.xlsx">Calculating Portfolio Return in Power Query.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Cross%20Join%20Data.xlsx">Cross Join Data.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Date%20Table%20with%20Table.FromList.xlsx">Date Table with Table.FromList.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Date.SuperQuarter%20Power%20Query.xlsx">Date.SuperQuarter Power Query.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Days%20Calculation%20across%20Accounting%20Periods.xlsx">Days Calculation across Accounting Periods.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Excel.Trim%20function.xlsx">Excel.Trim function.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Full%20Outer%20Join%20Data.xlsx">Full Outer Join Data.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Getting%202nd%20and%20Last%20Saturday%20of%20Every%20Month.xlsx">Getting 2nd and Last Saturday of Every Month.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Match%20Payments%20with%20Invoices%20on%20FIFO%20basis.xlsx">Match Payments with Invoices on FIFO basis.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Reference%20Other%20Columns%20while%20Transforming%20Existing%20Columns%20in%20Power%20Query.xlsx">Reference Other Columns while Transforming Existing Columns in Power Query.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Reference%20Previous%20Step%20of%20Another%20Query.xlsx">Reference Previous Step of Another Query.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Remove%20Diacritic%20or%20Accent%20Symbols%20in%20Power%20Query.xlsx">Remove Diacritic or Accent Symbols in Power Query.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Running%20Total%20with%20Previous%20Value%20Comparison%20-%20Excel.xlsx">Running Total with Previous Value Comparison - Excel.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Running%20Total%20with%20Previous%20Value%20Comparison%20-%20Power%20Query.xlsx">Running Total with Previous Value Comparison - Power Query.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Sales%20YTD%20in%20Excel.xlsx">Sales YTD in Excel.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Sales%20YTD%20in%20Power%20Query.xlsx">Sales YTD in Power Query.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Splitting%20Cells%20with%20Line%20Feeds%20into%20Multiple%20Rows.xlsx">Splitting Cells with Line Feeds into Multiple Rows.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Splitting%20Many%20Columns%20at%20same%20time%20in%20Power%20Query.xlsx">Splitting Many Columns at same time in Power Query.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Stock%20Balances%20on%20FIFO%20Basis%20in%20Power%20Query.xlsx">Stock Balances on FIFO Basis in Power Query.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Super.Trim%20Function%20Power%20Query.xlsx">Super.Trim Function Power Query.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Table.Partition%20for%20Second%20and%20Last%20Saturdays.xlsx">Table.Partition for Second and Last Saturdays.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Transform%20Column%20Names.xlsx">Transform Column Names.xlsx</a></li>
-            <li class="file-item"><a href="https://github.com/Hermione-Granger-1176/LinkedIn/raw/LinkedIn/Excel%20Files/Transform%20Column%20Names%20Part%202.xlsx">Transform Column Names Part 2.xlsx</a></li>
-
+            <li class="file-item">
+                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Alternatives%20to%20Nested%20IFS%20in%20Power%20Query.xlsx">Alternatives to Nested IFS in Power Query.xlsx</a>
+            </li>
             <!-- Add more files as needed -->
         </ul>
     </div>
-
-    <script>
-        function toggleSearch() {
-            var searchInput = document.getElementById('search');
-            searchInput.classList.toggle('active');
-            if (searchInput.classList.contains('active')) {
-                searchInput.focus();
-            }
-        }
-
-        // JavaScript to filter files based on search input
-        document.getElementById('search').addEventListener('input', function() {
-            var searchValue = this.value.toLowerCase();
-            var fileList = document.getElementById('fileList');
-            var items = fileList.getElementsByClassName('file-item');
-
-            for (var i = 0; i < items.length; i++) {
-                var fileName = items[i].getElementsByTagName('a')[0].textContent.toLowerCase();
-                if (fileName.includes(searchValue)) {
-                    items[i].style.display = '';
-                } else {
-                    items[i].style.display = 'none';
-                }
-            }
-        });
-    </script>
 </body>
 </html>
