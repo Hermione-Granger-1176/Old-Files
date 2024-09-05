@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedIn Files</title>
     <!-- Import Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Roboto', sans-serif; /* Body font */
             background-color: #2A2B2A;
             color: #FFFFFF;
             margin: 0;
             padding: 0;
         }
         header {
+            font-family: 'Orbitron', sans-serif; /* Heading font */
             background-color: #2A2B2A;
             color: #FFFFFF;
             padding: 20px;
@@ -42,7 +43,7 @@
             padding: 5px 10px;
             border-radius: 5px;
             background-color: #2A2B2A;
-            transition: all 0.3s ease;
+            transition: all 0s ease; /* No delay for hover effect */
         }
         .nav a:hover {
             background-color: #FFE019;
@@ -92,19 +93,19 @@
             transition: all 0.3s ease;
             border: 2px solid transparent;
         }
-        .file-item:hover {
-            background-color: #FFE019;
-            color: #2A2B2A;
-        }
         .file-item a {
             text-decoration: none;
             color: #2A2B2A;
             font-size: 1.2em;
             flex: 1;
-            transition: color 0.3s;
+            transition: all 0s ease; /* No delay for hover effect */
         }
-        .file-item a:hover {
-            color: #FFFFFF;
+        .file-item:hover {
+            background-color: #FFE019; /* Yellow background on hover */
+            color: #2A2B2A; /* Black text on hover */
+        }
+        .file-item:hover a {
+            color: #2A2B2A; /* Black text on hover */
         }
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
