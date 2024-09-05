@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Gaming Learning</title>
     <!-- Import Fonts from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto', sans-serif; /* Body font */
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: #2A2B2A; /* Background color */
+            color: #FFFFFF; /* Text color */
             margin: 0;
             padding: 0;
         }
         h1 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Orbitron', sans-serif; /* Heading font */
             margin-top: 50px;
             font-size: 2.5em;
+            color: #FFFFFF; /* Heading color */
         }
         p {
             font-size: 1.2em;
-            color: #333;
+            color: #FFFFFF; /* Text color */
             margin-top: 20px;
         }
         .container {
@@ -35,21 +37,20 @@
             margin: 10px;
             font-size: 1.2em;
             text-decoration: none;
-            color: #fff;
+            color: #2A2B2A; /* Text color */
             border-radius: 5px;
-            transition: background-color 0.3s;
+            background-color: #FFE019; /* Button background color */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .button-blue {
-            background-color: #007bff;
+        .button i {
+            margin-right: 10px; /* Space between icon and text */
         }
-        .button-blue:hover {
-            background-color: #0056b3;
-        }
-        .button-green {
-            background-color: #28a745;
-        }
-        .button-green:hover {
-            background-color: #218838;
+        .button:hover {
+            background-color: #FFD700; /* Hover background color */
+            color: #2A2B2A; /* Hover text color */
         }
         .hierarchy-chart {
             margin-top: 20px;
@@ -61,8 +62,12 @@
     <p>Welcome to The Gaming Learning! Here you can find links to my LinkedIn files and Excel BI challenges.</p>
     <div class="container">
         <div class="hierarchy-chart">
-            <a href="https://hermione-granger-1176.github.io/LinkedIn/Excel%20Files/index.html" class="button button-blue">My LinkedIn Files</a>
-            <a href="https://github.com/Hermione-Granger-1176/LinkedIn" class="button button-green">Excel BI Challenges</a>
+            <a href="https://hermione-granger-1176.github.io/LinkedIn/Excel%20Files/index.html" class="button">
+                <i class="fas fa-link"></i> My LinkedIn Files
+            </a>
+            <a href="https://github.com/Hermione-Granger-1176/LinkedIn" class="button">
+                <i class="fas fa-file-excel"></i> Excel BI Challenges
+            </a>
         </div>
     </div>
 </body>
