@@ -86,7 +86,7 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
         .file-item:nth-child(odd) {
             background-color: #f9f9f9;
@@ -107,13 +107,14 @@
             border-radius: 5px;
             background-color: #0077b5; /* LinkedIn color */
             transition: background-color 0.3s;
-            margin-right: 15px;
+            margin-right: 10px;
+            text-align: center;
+        }
+        .file-item .button i {
+            font-size: 1em;
         }
         .file-item .button:hover {
             background-color: #005b7f;
-        }
-        .button i {
-            font-size: 1em;
         }
     </style>
 </head>
@@ -130,13 +131,14 @@
         </div>
     </header>
     <div class="container">
-        <ul class="file-list">
+        <ul class="file-list" id="fileList">
             <li class="file-item">
                 <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Alternatives%20to%20Nested%20IFS%20in%20Power%20Query.xlsx" download class="button">
                     <i class="fas fa-download"></i> <!-- Download Icon -->
                 </a>
                 <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Alternatives%20to%20Nested%20IFS%20in%20Power%20Query.xlsx">Alternatives to Nested IFS in Power Query.xlsx</a>
             </li>
+            <!-- Add more files as needed -->
         </ul>
     </div>
 
@@ -148,6 +150,22 @@
                 searchInput.focus();
             }
         }
+
+        // JavaScript to filter files based on search input
+        document.getElementById('search').addEventListener('input', function() {
+            var searchValue = this.value.toLowerCase();
+            var fileList = document.getElementById('fileList');
+            var items = fileList.getElementsByClassName('file-item');
+
+            for (var i = 0; i < items.length; i++) {
+                var fileName = items[i].getElementsByTagName('a')[1].textContent.toLowerCase();
+                if (fileName.includes(searchValue)) {
+                    items[i].style.display = '';
+                } else {
+                    items[i].style.display = 'none';
+                }
+            }
+        });
     </script>
 </body>
 </html>
