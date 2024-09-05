@@ -16,16 +16,46 @@
             margin: 0;
             padding: 0;
         }
-        h1 {
-            font-family: 'Montserrat', sans-serif;
+        header {
+            background-color: #0077b5; /* LinkedIn color */
+            color: #fff;
+            padding: 10px 0;
             text-align: center;
-            margin-top: 20px;
-            font-size: 2.5em;
-            color: #333;
+        }
+        header h1 {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #005b7f;
+        }
+        .nav a:hover {
+            background-color: #003f5c;
         }
         .container {
             margin: 50px auto;
             width: 80%;
+        }
+        .search-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .search-container input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 50%;
+            border-radius: 5px;
+            border: 1px solid #ddd;
         }
         .file-list {
             list-style-type: none;
@@ -38,8 +68,8 @@
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
         .file-item a {
             text-decoration: none;
@@ -53,8 +83,8 @@
         }
         .button {
             display: inline-block;
-            padding: 10px 20px;
-            font-size: 1em;
+            padding: 5px 10px;
+            font-size: 0.9em;
             text-decoration: none;
             color: #fff;
             border-radius: 5px;
@@ -67,52 +97,22 @@
     </style>
 </head>
 <body>
-    <h1>LinkedIn Files</h1>
+    <header>
+        <h1>LinkedIn Files</h1>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="#">LinkedIn Files</a>
+            <a href="#">Excel BI Challenges</a>
+        </div>
+    </header>
     <div class="container">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search files...">
+        </div>
         <ul class="file-list">
             <li class="file-item">
                 <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Alternatives%20to%20Nested%20IFS%20in%20Power%20Query.xlsx" download>Alternatives to Nested IFS in Power Query.xlsx</a>
                 <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Alternatives%20to%20Nested%20IFS%20in%20Power%20Query.xlsx" class="button">Download</a>
-            </li>
-            <li class="file-item">
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Bullet%20Chart%20in%20Excel.xlsx" download>Bullet Chart in Excel.xlsx</a>
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Bullet%20Chart%20in%20Excel.xlsx" class="button">Download</a>
-            </li>
-            <li class="file-item">
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Calculating%20Portfolio%20Return%20in%20Excel.xlsx" download>Calculating Portfolio Return in Excel.xlsx</a>
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Calculating%20Portfolio%20Return%20in%20Excel.xlsx" class="button">Download</a>
-            </li>
-            <li class="file-item">
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Calculating%20Portfolio%20Return%20in%20Power%20Query.xlsx" download>Calculating Portfolio Return in Power Query.xlsx</a>
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Calculating%20Portfolio%20Return%20in%20Power%20Query.xlsx" class="button">Download</a>
-            </li>
-            <li class="file-item">
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Cross%20Join%20Data.xlsx" download>Cross Join Data.xlsx</a>
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Cross%20Join%20Data.xlsx" class="button">Download</a>
-            </li>
-            <li class="file-item">
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Date%20Table%20with%20Table.FromList.xlsx" download>Date Table with Table.FromList.xlsx</a>
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Date%20Table%20with%20Table.FromList.xlsx" class="button">Download</a>
-            </li>
-            <li class="file-item">
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Date.SuperQuarter%20Power%20Query.xlsx" download>Date.SuperQuarter Power Query.xlsx</a>
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Date.SuperQuarter%20Power%20Query.xlsx" class="button">Download</a>
-            </li>
-            <li class="file-item">
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Days%20Calculation%20across%20Accounting%20Periods.xlsx" download>Days Calculation across Accounting Periods.xlsx</a>
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Days%20Calculation%20across%20Accounting%20Periods.xlsx" class="button">Download</a>
-            </li>
-            <li class="file-item">
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Excel.Trim%20function.xlsx" download>Excel.Trim function.xlsx</a>
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Excel.Trim%20function.xlsx" class="button">Download</a>
-            </li>
-            <li class="file-item">
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Full%20Outer%20Join%20Data.xlsx" download>Full Outer Join Data.xlsx</a>
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Full%20Outer%20Join%20Data.xlsx" class="button">Download</a>
-            </li>
-            <li class="file-item">
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Getting%202nd%20and%20Last%20Saturday%20of%20Every%20Month.xlsx" download>Getting 2nd and Last Saturday of Every Month.xlsx</a>
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Getting%202nd%20and%20Last%20Saturday%20of%20Every%20Month.xlsx" class="button">Download</a>
             </li>
         </ul>
     </div>
