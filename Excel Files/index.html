@@ -80,39 +80,39 @@
         }
         .file-item {
             margin: 10px 0;
-            padding: 10px 15px; /* Adjust padding for a cleaner look */
+            padding: 10px 15px;
             background-color: #fff;
             border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Ensure proper spacing */
+            justify-content: space-between;
+            flex-wrap: wrap; /* Ensure content wraps if necessary */
         }
         .file-item a {
             text-decoration: none;
             color: #333;
             font-size: 1.1em;
-            flex: 1;
+            flex-grow: 1; /* Let the text take up as much space as possible */
             text-align: left;
-            overflow: hidden; /* Ensure text doesn't spill out */
-            text-overflow: ellipsis;
-            white-space: nowrap; /* Prevent wrapping of long text */
+            margin-right: 15px; /* Space between the text and the button */
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden; /* Hide overflow text */
+            text-overflow: ellipsis; /* Show ellipsis for overflow text */
         }
         .file-item .button {
-            display: inline-flex; /* Use inline-flex for better alignment */
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 8px 12px; /* Adjust padding for consistent button size */
+            padding: 8px 12px;
             font-size: 0.9em;
             text-decoration: none;
             color: #fff;
             border-radius: 5px;
-            background-color: #0077b5; /* LinkedIn color */
+            background-color: #0077b5;
             transition: background-color 0.3s;
-            margin-right: 10px;
-            text-align: center;
-            width: auto; /* Prevent button from stretching */
-            flex-shrink: 0; /* Ensure button doesn't shrink */
+            flex-shrink: 0; /* Prevent button from shrinking */
+            white-space: nowrap;
         }
         .file-item .button i {
             font-size: 1em;
