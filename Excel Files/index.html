@@ -87,35 +87,34 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap; /* Ensure content wraps if necessary */
         }
         .file-item a {
             text-decoration: none;
             color: #333;
             font-size: 1.1em;
-            flex-grow: 1; /* Let the text take up as much space as possible */
+            flex-grow: 1;
             text-align: left;
-            margin-right: 15px; /* Space between the text and the button */
-            white-space: nowrap; /* Prevent text from wrapping */
-            overflow: hidden; /* Hide overflow text */
-            text-overflow: ellipsis; /* Show ellipsis for overflow text */
+            margin-right: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .file-item .button {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
-            padding: 8px 12px;
-            font-size: 0.9em;
+            width: 30px; /* Adjusted width for icon size */
+            height: 30px; /* Adjusted height for icon size */
             text-decoration: none;
             color: #fff;
-            border-radius: 5px;
-            background-color: #0077b5;
+            border-radius: 50%; /* Makes the button round */
+            background-color: #0077b5; /* LinkedIn color */
             transition: background-color 0.3s;
-            flex-shrink: 0; /* Prevent button from shrinking */
-            white-space: nowrap;
+            margin-right: 10px;
+            padding: 0; /* Remove padding */
         }
         .file-item .button i {
-            font-size: 1em;
+            font-size: 1.2em; /* Adjusted icon size */
         }
         .file-item .button:hover {
             background-color: #005b7f;
