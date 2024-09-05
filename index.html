@@ -15,38 +15,46 @@
             color: #FFFFFF; /* Text color */
             margin: 0;
             padding: 0;
-            background-image: linear-gradient(to bottom right, #2A2B2A, #1F1F1F); /* Gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            overflow: hidden;
+        }
+        .content {
+            text-align: center;
+            background-color: #2A2B2A;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         h1 {
             font-family: 'Orbitron', sans-serif; /* Heading font */
-            margin-top: 80px; /* Increased margin from top */
-            font-size: 3em; /* Increased font size */
+            font-weight: bold; /* Bold heading */
+            margin: 0;
+            font-size: 3em;
             color: #FFFFFF; /* Heading color */
-            margin-bottom: 40px; /* Increased margin below heading */
+            margin-bottom: 40px; /* Space below the heading */
         }
         p {
-            font-size: 1.4em; /* Increased font size */
+            font-size: 1.2em;
             color: #FFFFFF; /* Text color */
-            margin: 0 auto 40px auto; /* Margin around the paragraph */
-            max-width: 900px; /* Limit text width */
-            line-height: 1.6; /* Better line spacing */
+            margin: 0 0 40px 0; /* Space below the paragraph */
         }
         .container {
-            margin: 0 auto; /* Center the container */
-            width: 90%; /* Increase the width */
-            max-width: 1200px; /* Set a max width */
-            padding: 0 20px; /* Add horizontal padding */
+            width: 100%; /* Full width of the content area */
+            max-width: 1200px; /* Maximum width for larger screens */
+            margin: 0 auto; /* Centering the container */
         }
         .hierarchy-chart {
             display: flex;
             justify-content: center; /* Center align items horizontally */
-            gap: 30px; /* Increased space between buttons */
-            margin-top: 40px; /* Increased margin from top */
+            gap: 20px; /* Space between buttons */
         }
         .button {
             display: inline-block;
-            padding: 20px 40px; /* Increased padding */
-            font-size: 1.3em; /* Increased font size */
+            padding: 15px 30px;
+            font-size: 1.2em;
             text-decoration: none;
             color: #2A2B2A; /* Text color */
             background-color: #FFFFFF; /* Button background color */
@@ -56,12 +64,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 300px; /* Set a fixed width */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
-            font-weight: bold; /* Make button text bold */
+            width: 250px; /* Set a fixed width */
         }
         .button i {
-            margin-right: 15px; /* Increased space between icon and text */
+            margin-right: 10px; /* Space between icon and text */
         }
         .button:hover {
             background-color: #FFE019; /* Hover background color */
@@ -70,16 +76,18 @@
     </style>
 </head>
 <body>
-    <h1>The Gaming Learning</h1>
-    <p>Welcome to The Gaming Learning! Here you can find links to my LinkedIn files and Excel BI challenges.</p>
-    <div class="container">
-        <div class="hierarchy-chart">
-            <a href="https://hermione-granger-1176.github.io/LinkedIn/Excel%20Files/index.html" class="button">
-                <i class="fab fa-linkedin"></i> My LinkedIn Files
-            </a>
-            <a href="#" class="button">
-                <i class="fas fa-file-excel"></i> Excel BI Challenges
-            </a>
+    <div class="content">
+        <h1>The Gaming Learning</h1>
+        <p>Welcome to The Gaming Learning! Here you can find links to my LinkedIn files and Excel BI challenges.</p>
+        <div class="container">
+            <div class="hierarchy-chart">
+                <a href="https://hermione-granger-1176.github.io/LinkedIn/Excel%20Files/index.html" class="button">
+                    <i class="fab fa-linkedin"></i> My LinkedIn Files
+                </a>
+                <a href="#" class="button">
+                    <i class="fas fa-file-excel"></i> Excel BI Challenges
+                </a>
+            </div>
         </div>
     </div>
 </body>
