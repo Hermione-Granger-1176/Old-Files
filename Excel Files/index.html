@@ -80,44 +80,28 @@
         }
         .file-item {
             margin: 10px 0;
-            padding: 10px 15px;
+            padding: 15px;
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
         }
         .file-item a {
             text-decoration: none;
             color: #333;
             font-size: 1.1em;
-            flex-grow: 1;
+            flex: 1;
             text-align: left;
-            margin-right: 15px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
         }
-        .file-item .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px; /* Adjusted width for icon size */
-            height: 30px; /* Adjusted height for icon size */
-            text-decoration: none;
-            color: #fff;
-            border-radius: 50%; /* Makes the button round */
-            background-color: #0077b5; /* LinkedIn color */
-            transition: background-color 0.3s;
-            margin-right: 10px;
-            padding: 0; /* Remove padding */
+        .file-item:hover {
+            background-color: #0077b5; /* LinkedIn color on hover */
         }
-        .file-item .button i {
-            font-size: 1.2em; /* Adjusted icon size */
-        }
-        .file-item .button:hover {
-            background-color: #005b7f;
+        .file-item a:hover {
+            color: #fff; /* White text on hover */
         }
     </style>
 </head>
@@ -136,9 +120,6 @@
     <div class="container">
         <ul class="file-list" id="fileList">
             <li class="file-item">
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Alternatives%20to%20Nested%20IFS%20in%20Power%20Query.xlsx" download class="button">
-                    <i class="fas fa-download"></i> <!-- Download Icon -->
-                </a>
                 <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Alternatives%20to%20Nested%20IFS%20in%20Power%20Query.xlsx">Alternatives to Nested IFS in Power Query.xlsx</a>
             </li>
             <!-- Add more files as needed -->
@@ -161,7 +142,7 @@
             var items = fileList.getElementsByClassName('file-item');
 
             for (var i = 0; i < items.length; i++) {
-                var fileName = items[i].getElementsByTagName('a')[1].textContent.toLowerCase();
+                var fileName = items[i].getElementsByTagName('a')[0].textContent.toLowerCase();
                 if (fileName.includes(searchValue)) {
                     items[i].style.display = '';
                 } else {
