@@ -20,21 +20,24 @@
             background-color: #0077b5; /* LinkedIn color */
             color: #fff;
             padding: 10px 0;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
         }
         header h1 {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
         }
         .nav {
-            text-align: center;
-            margin-top: 10px;
+            display: flex;
+            align-items: center;
         }
         .nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1em;
+            margin-left: 15px;
+            font-size: 1em;
             padding: 5px 10px;
             border-radius: 5px;
             background-color: #005b7f;
@@ -42,20 +45,32 @@
         .nav a:hover {
             background-color: #003f5c;
         }
+        .search-container {
+            position: relative;
+        }
+        .search-container input[type="text"] {
+            display: none;
+            padding: 10px;
+            font-size: 1em;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            position: absolute;
+            right: 0;
+            top: 35px;
+        }
+        .search-container input[type="text"].active {
+            display: inline-block;
+        }
+        .search-container .search-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #fff;
+            margin-left: 15px;
+        }
         .container {
             margin: 50px auto;
             width: 80%;
-        }
-        .search-container {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .search-container input[type="text"] {
-            padding: 10px;
-            font-size: 1em;
-            width: 50%;
-            border-radius: 5px;
-            border: 1px solid #ddd;
         }
         .file-list {
             list-style-type: none;
@@ -70,16 +85,24 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            transition: background-color 0.3s;
+        }
+        .file-item:nth-child(odd) {
+            background-color: #f9f9f9;
         }
         .file-item a {
             text-decoration: none;
             color: #333;
-            font-size: 1.2em;
+            font-size: 1.1em;
             flex: 1;
             text-align: left;
         }
         .file-item a:hover {
             text-decoration: underline;
+        }
+        .file-item:hover {
+            background-color: #0077b5; /* LinkedIn color */
+            color: #fff;
         }
         .button {
             display: inline-block;
@@ -100,15 +123,15 @@
     <header>
         <h1>LinkedIn Files</h1>
         <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="#">LinkedIn Files</a>
+            <a href="https://hermione-granger-1176.github.io/LinkedIn/">Home</a>
             <a href="#">Excel BI Challenges</a>
+            <div class="search-container">
+                <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+                <input type="text" id="search" placeholder="Search files...">
+            </div>
         </div>
     </header>
     <div class="container">
-        <div class="search-container">
-            <input type="text" id="search" placeholder="Search files...">
-        </div>
         <ul class="file-list">
             <li class="file-item">
                 <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Alternatives%20to%20Nested%20IFS%20in%20Power%20Query.xlsx" download>Alternatives to Nested IFS in Power Query.xlsx</a>
@@ -116,5 +139,17 @@
             </li>
         </ul>
     </div>
+
+    <script>
+        function toggleSearch() {
+            var searchInput = document.getElementById('search');
+            if (searchInput.classList.contains('active')) {
+                searchInput.classList.remove('active');
+            } else {
+                searchInput.classList.add('active');
+                searchInput.focus();
+            }
+        }
+    </script>
 </body>
 </html>
