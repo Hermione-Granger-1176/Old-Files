@@ -1,16 +1,15 @@
-# Welcome to My Learning Website!
+<h1 align="center">The Gaming Learning</h1>
 
-This is a simple webpage that provides resources for learning. Click the buttons below to download files.
+<p align="center">Welcome to The Gaming Learning! Here you can find links to my LinkedIn files and Excel BI challenges.</p>
 
-### Download Files
+<div align="center">
 
-<button style="padding:10px; background-color:#4CAF50; color:white; border:none; cursor:pointer;">
-    <a href="file1.zip" style="color:white; text-decoration:none;">Download File 1</a>
-</button>
+  <div style="margin-bottom: 20px;">
+    <a href="https://github.com/Hermione-Granger-1176/LinkedIn" style="display: inline-block; padding: 15px 30px; margin: 10px; font-size: 1.2em; text-decoration: none; color: #fff; background-color: #007bff; border-radius: 5px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007bff'">My LinkedIn Files</a>
+  </div>
+  
+  <div>
+    <a href="https://github.com/Hermione-Granger-1176/LinkedIn" style="display: inline-block; padding: 15px 30px; margin: 10px; font-size: 1.2em; text-decoration: none; color: #fff; background-color: #28a745; border-radius: 5px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#218838'" onmouseout="this.style.backgroundColor='#28a745'">Excel BI Challenges</a>
+  </div>
 
-<button style="padding:10px; background-color:#008CBA; color:white; border:none; cursor:pointer;">
-    <a href="file2.pdf" style="color:white; text-decoration:none;">Download File 2</a>
-</button>
-
-### Other Resources
-- [Check out more resources](https://example.com)
+</div>
