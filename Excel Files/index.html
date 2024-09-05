@@ -100,7 +100,7 @@
         }
         .file-item .button {
             display: inline-block;
-            padding: 5px 10px;
+            padding: 5px;
             font-size: 0.9em;
             text-decoration: none;
             color: #fff;
@@ -111,6 +111,9 @@
         }
         .file-item .button:hover {
             background-color: #005b7f;
+        }
+        .button i {
+            font-size: 1em;
         }
     </style>
 </head>
@@ -129,7 +132,9 @@
     <div class="container">
         <ul class="file-list">
             <li class="file-item">
-                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Alternatives%20to%20Nested%20IFS%20in%20Power%20Query.xlsx" download class="button">Download</a>
+                <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Alternatives%20to%20Nested%20IFS%20in%20Power%20Query.xlsx" download class="button">
+                    <i class="fas fa-download"></i> <!-- Download Icon -->
+                </a>
                 <a href="https://github.com/Hermione-Granger-1176/LinkedIn/blob/main/Excel%20Files/Alternatives%20to%20Nested%20IFS%20in%20Power%20Query.xlsx">Alternatives to Nested IFS in Power Query.xlsx</a>
             </li>
         </ul>
@@ -138,10 +143,8 @@
     <script>
         function toggleSearch() {
             var searchInput = document.getElementById('search');
+            searchInput.classList.toggle('active');
             if (searchInput.classList.contains('active')) {
-                searchInput.classList.remove('active');
-            } else {
-                searchInput.classList.add('active');
                 searchInput.focus();
             }
         }
