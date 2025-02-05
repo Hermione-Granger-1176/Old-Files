@@ -1,1 +1,0 @@
-The Power of Rich Data Types and STOCKHISTORY Function
